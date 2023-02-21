@@ -1,33 +1,20 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { updateToken } from '../../redux/token/tokenSlice.js'
-import meterService from '../../service/meterService.js'
-import tokenService from '../../service/tokenService'
 
 import Screen from '../Screen/Screen.jsx'
 
 const Testing = () => {
   const {meter} = useSelector((state)=> state)
   const { token } = useSelector( ( state ) => state )
-  const dispatch = useDispatch()
-  const [ customer, setCustomer ] = useState( [] )
+  const dispatch = useDispatch()  
   const [ selectedOption, setSelectedOption ] = useState( meter[ 0 ] )
-  const [ tokens, setTokens ] = useState( '' )
-  // const [ tokens, setTokens ] = useState( [] )  
+  const [ tokens, setTokens ] = useState( '' )  
   const [ showModal, setShowModal ] = useState( false )
   const [ amount, setAmount ] = useState( '' )
   const [ units, setUnits ] = useState( '' )  
   
-  // useEffect( () => {
-  //   meterService.getAll()
-  //     .then(initialCustomer=> setCustomer(initialCustomer))
-  // }, [] )
-
-  // useEffect( () => {
-  //   tokenService.getAll()
-  //     .then( initialToken => setTokens( initialToken ) )
-  // },[])  
 
   const handleSubmit = ( e ) => {
     e.preventDefault()
@@ -42,13 +29,7 @@ const Testing = () => {
       
 
       dispatch( updateToken(matchCustomer))
-      
-      // update token
-      const usedToken = {
-        ...matchCustomer,
-        used: true
-      }
-      // await tokenService.update( matchCustomer.id, usedToken )
+          
       setSelectedOption( '' )
       setTokens('')
     
