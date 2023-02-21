@@ -4,12 +4,10 @@ import { unregisterMeter } from '../../redux/meter/meterSlice'
 import { unregisterToken } from '../../redux/token/tokenSlice'
 
 const Unregister = () => {
-  const { meter } = useSelector( ( state ) => state )    
-	const { token } = useSelector( ( state ) => state )  
+  const { meter } = useSelector( ( state ) => state )    	
 	const dispatch = useDispatch()
 	const[meters,setMeters]=useState([])
-  const [ selectedOption, setSelectedOption ] = useState(meters[0] )  
-  console.log('selectedOption', selectedOption)   
+  const [ selectedOption, setSelectedOption ] = useState(meters[0] )     
 
   const handleSubmit = ( e ) => {
 		e.preventDefault()

@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { useSelector } from 'react-redux'
-import buy from '../../assets/cart-plus.svg'
 import Buy from '../Buy/Buy'
 import Notification from '../Notification/Notification'
 
