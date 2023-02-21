@@ -10,8 +10,7 @@ import { registerToken } from '../../redux/token/tokenSlice'
 const Buy = ({ showForm,setShowForm }) => {
 	const { meter } = useSelector((state) => state)
 	const { token } = useSelector((state) => state)
-	const dispatch = useDispatch()
-	const [showNotification, setShowNotification] = useState(false)
+	const dispatch = useDispatch()	
 	const [meters, setMeters] = useState([])
 	const [selectedOption, setSelectedOption] = useState(meters[1])
 	const [ amount, setAmount ] = useState( '' )
@@ -29,13 +28,6 @@ const Buy = ({ showForm,setShowForm }) => {
 	const token5 = Math.floor(1000 + Math.random() * 9000)
 	const joinToken =
 		token1 + ' ' + token2 + ' ' + token3 + ' ' + token4 + ' ' + token5
-
-const handleNotification = (message, time) => {
-	setNotify('Bought Token')
-	setTimeout(() => {
-		setNotify('')
-	}, 2000)
-}
 	
 	const handleBuy = async (e) => {
 		e.preventDefault()
@@ -62,8 +54,7 @@ const handleNotification = (message, time) => {
 			id: token.length + 1,
 		}
 
-		dispatch(registerToken(newObject))
-		setShowNotification(true)
+		dispatch(registerToken(newObject))		
 		setSelectedOption('')
 		setAmount( '' )
 		setShowForm( !showForm )		

@@ -1,4 +1,3 @@
-import logo from '../../assets/lightbulb.svg'
 const Header = ( { showMenu, setShowMenu } ) => {
   
   return (
