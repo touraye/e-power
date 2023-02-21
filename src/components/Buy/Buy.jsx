@@ -13,9 +13,7 @@ const Buy = ({ showForm,setShowForm }) => {
 	const dispatch = useDispatch()	
 	const [meters, setMeters] = useState([])
 	const [selectedOption, setSelectedOption] = useState(meters[1])
-	const [ amount, setAmount ] = useState( '' )
-	const [notify, setNotify] = useState('')
-
+	const [ amount, setAmount ] = useState( '' )	
 
 	useEffect(() => {
 		setMeters(meter)
@@ -61,8 +59,7 @@ const Buy = ({ showForm,setShowForm }) => {
 	}	 
 
 	return (
-		<div className='main-container modal add-form'>
-			{notify.length > 0 ? <Notification message={notify} /> : ''}
+		<div className='main-container modal add-form'>			
 			<div className='back-btn-container'>
 				<button className='back-btn' onClick={() => setShowForm(!showForm)}>
 					&#8592;
