@@ -47,7 +47,7 @@ const Menu = ({showMenu, setShowMenu}) => {
 					</Link>
 				</li>
 				<li>
-					<Link to='/history' onClick={() => setShowMenu(!showMenu)}>
+					<Link to='/setting' onClick={() => setShowMenu(!showMenu)}>
 						<div className='flex'>
 							<img src={setting} alt='' />
 							<p>setting</p>

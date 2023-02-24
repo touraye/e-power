@@ -1,13 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const More = () => {
+const Setting = () => {
   return (
     <div className='main-container more-container'>
       <div className="back-btn-container">
           <Link className='back-btn' to='/'>&#8592;</Link>
       </div>
-      <h3>more actions</h3>
+      <h3>manage you meters</h3>
       <ul className='list'>
         <li className='item'>
           <Link to='/Unregister'>
@@ -24,4 +24,4 @@ const More = () => {
   )
 }
 
-export default More
+export default Setting

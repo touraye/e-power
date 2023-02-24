@@ -38,3 +38,8 @@ export const currencyFormat = ( currency ) => {
   
 	return unFormated?.split('ZAR')
 }
+
+export const getCurrentMonth = () => {
+	let currentMonth = new Date().getMonth() + 1
+	return currentMonth
+}

@@ -26,8 +26,7 @@ const Tokens = () => {
 			: filtered === 'used'
 			? token.filter((t) => t.used === true).reverse()
 			: token.filter((t) => t.used === false).reverse()
-		
-  
+		  
   return (
 		<div className='main-container token-list'>
 			{/* <div className="back-btn-container">
@@ -81,10 +80,10 @@ const Tokens = () => {
 				</ul>
 			) : (
 				<p>You haven't bought any token yet. Buy token</p>
-			)}
-			<button onClick={() => setShowForm(true)} className='register-btn'>
+			) }			
+			{showForm ? "" : <button onClick={() => setShowForm(true)} className='register-btn'>
 				<img src={buy} alt='register' />
-			</button>
+			</button>}
 		</div>
 	)
 }

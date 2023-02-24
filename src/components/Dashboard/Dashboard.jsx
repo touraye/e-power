@@ -2,7 +2,7 @@ import {useSelector} from 'react-redux'
 import { Link } from 'react-router-dom'
 import buy from '../../assets/cart-plus.svg'
 import meters from '../../assets/list-task.svg'
-import more from '../../assets/three-dots-vertical.svg'
+import setting from '../../assets/setting.svg'
 import history from '../../assets/clock-history.svg'
 import enterToken from '../../assets/tv.svg'
 
@@ -42,9 +42,9 @@ const Dashboard = () => {
             ''
           }
         </Link>
-        <Link to='/more' className='menu-icon more'>
-          <img src={more} alt="more" />
-          more
+        <Link to='/setting' className='menu-icon more'>
+          <img src={setting} alt="setting" />
+          settings
         </Link>
         <Link to='/testing' className='menu-icon more'>
           <img src={enterToken} alt="enter token" />

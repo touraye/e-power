@@ -19,7 +19,7 @@ const Meters = () => {
 				{ meter.length > 0 ?
 					meter.map( ( item ) => (
 					<Meter key={item.id} data={item} />
-				)) : 'No meter number registered. Register your meter!'}
+				)).reverse() : 'No meter number registered. Register your meter!'}
 			</ul>
 			{showForm ? "": <div className='btn-container'>				
 				<button onClick={() => setShowForm(true)} className='register-btn'>

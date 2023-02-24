@@ -8,9 +8,10 @@ import Meters from './components/Meters/Meters';
 import Register from "./components/Register/Register"
 import Tokens from './components/Token/Tokens';
 import Notification from './components/Notification/Notification';
-import More from './components/More/More';
-import Unregister from './components/More/Unregister';
+import Setting from './components/Setting/Setting';
+import Unregister from './components/Setting/Unregister';
 import RequestToken from './components/requestToken/RequestToken'
+import History from './components/history/History';
 import Testing from './components/Testing/Testing';
 
 
@@ -28,8 +29,9 @@ return (
 			<Route path='/register' element={<Register />}></Route>
 			<Route path='/buy' element={<Buy />}></Route>
 			<Route path='/token' element={<Tokens />}></Route>
-			<Route path='/more' element={<More />}></Route>
+			<Route path='/setting' element={<Setting />}></Route>
 			<Route path='/Unregister' element={<Unregister />}></Route>
+			<Route path='/history' element={<History />}></Route>
 			<Route path='/requestToken' element={<RequestToken />}></Route>
 			<Route path='/testing' element={<Testing />}></Route>
 		</Routes>

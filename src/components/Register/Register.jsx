@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { registerMeter } from "../../redux/meter/meterSlice";
+import {FaTimes} from 'react-icons/fa'
 
 const Register = ( { showForm, setShowForm } ) => {
 	const {meter}=useSelector((state)=>state)
@@ -41,7 +42,8 @@ const Register = ( { showForm, setShowForm } ) => {
 		<div className='main-container modal add-form'>
 			<div className='back-btn-container close-modal'>
 				<button onClick={() => setShowForm(!showForm)} className='back-btn'>
-					&#8592;
+					{/* &#8592; */}
+					<FaTimes />
 				</button>
 			</div>
 			<h3>Register meter number</h3>

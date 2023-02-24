@@ -278,11 +278,13 @@ header h1 {
   margin-bottom: 1.3rem;
 }
 
+.main-container .unregister-p {
+  margin-bottom: 1rem;
+}
+
 .back-btn-container {
-  display: flex;
-  /* align-items: flex-start; */
-  padding-left: 1rem;
-  margin-bottom: 2rem;
+  display: flex;   
+  justify-content: flex-end; 
 }
 
 .close-modal {
@@ -297,6 +299,8 @@ header h1 {
   text-decoration: none;
   font-size: 2rem;
   font-weight: 600;    
+  background-color: transparent;
+  border: none;
 }
 
 /* form */
@@ -428,6 +432,7 @@ form select option {
 
 .sub {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 1rem;  
@@ -500,10 +505,28 @@ testing {
 }
 
 .add-form {
-  top: 50px;
-  right: 18px;
-  width: 330px;  
+  top: 74px;
+  right: 24px;
+  width: 86%;
   padding: 0.4rem;
+}
+
+@media screen and (min-width: 375px) {
+  .add-form {
+    top: 74px;
+    right: 28px;
+    width: 86%;
+    padding: 0.4rem;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .add-form {
+    top: 74px;
+    right: 32px;
+    width: 86%;
+    padding: 0.4rem;
+  }
 }
 
 .modal .info {
@@ -596,7 +619,13 @@ testing {
   .notification-container {
     position: fixed;
     top: 85px;
-    right: 332px;
-    outline: 1px solid red;
+    right: 332px;    
+  }
+
+  .add-form {
+    top: 74px;
+    right: 38px;
+    width: 86%;
+    padding: 0.4rem;
   }
 }

@@ -16,11 +16,14 @@ const Unregister = () => {
 		
 		const foundMeterNumber = meters.find( meter => meter.id === Number(selectedOption) )		
 		
-		if ( window.confirm( 'Proceed deleting  meter and all related tokens' ) ) {
-			
-			dispatch( unregisterMeter( foundMeterNumber.meterNumber ) )
+		if (
+			window.confirm(
+				`Proceed deleting ${foundMeterNumber.customerName.toUpperCase()}'s meter number and all its related token(s)`
+			)
+		) {
+			dispatch(unregisterMeter(foundMeterNumber.meterNumber))
 			dispatch(unregisterToken(foundMeterNumber.meterNumber))
-	
+
 			setSelectedOption('')
 		}
 		
@@ -37,8 +40,11 @@ const Unregister = () => {
 					&#8592;
 				</Link>
 			</div> */}
-			<h3>unregister meter</h3>
-			<p>If unregister a meter it's token will also be deleted as well</p>
+			<h3>unregister meter number</h3>
+			<p className='unregister-p'>
+				If you unregister a meter number all of it's <strong>token(s)</strong>{' '}
+				will also be deleted as well.
+			</p>
 			<form onSubmit={handleSubmit}>
 				<div className='form-control'>
 					<label htmlFor='customer'>customer</label>

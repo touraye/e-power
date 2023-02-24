@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { serviceFee } from '../../helpers/helpers'
-import Notification from '../Notification/Notification'
+
+import {FaTimes} from 'react-icons/fa'
 
 import tokenImg from '../../assets/cart-plus.svg'
 import { registerToken } from '../../redux/token/tokenSlice'
@@ -62,7 +63,8 @@ const Buy = ({ showForm,setShowForm }) => {
 		<div className='main-container modal add-form'>			
 			<div className='back-btn-container'>
 				<button className='back-btn' onClick={() => setShowForm(!showForm)}>
-					&#8592;
+					{/* &#8592; */}
+					<FaTimes />
 				</button>
 			</div>
 			<h3>buy token</h3>
@@ -99,9 +101,9 @@ const Buy = ({ showForm,setShowForm }) => {
 					<input type='submit' value='PURCHASE' />
 				</div>
 			</form>
-			<Link to='/token' className='register-btn'>
+			{/* <Link to='/token' className='register-btn'>
 				<img src={tokenImg} alt='token img' />
-			</Link>
+			</Link> */}
 		</div>
 	)
 }
